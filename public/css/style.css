@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Nano-Regular';
+    src: url('/fonts/Nano-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container für den gesamten Inhalt */
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Header mit RAUM-Titel */
+  header {
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: -10px;
+  }
+  
+  h1 {
+    font-family: 'Nano-Regular', 'Arial Narrow', sans-serif;
+    font-size: 37vw;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: left;
+    width: 100%;
+  }
+  
+  @media (min-width: 801px) {
+    h1 {
+      font-size: 296px; /* 800 * 0.37 = 296 */
+    }
+  }
+
+  @font-face {
+    font-family: 'Epilogue';
+    src: url('/public/fonts/Epilogue-VariableFont_wght.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Allgemeiner Textcontainer */
+  .intro-text {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400; /* Black style = sehr fett */
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 800px; /* Erhöht auf 800px */
+  }
+  
+  /* Hauptüberschrift */
+  .intro-text h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Textabsätze */
+  .intro-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Karte nimmt die volle Breite ein */
+  .map-container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  #map {
+    height: 600px;
+    width: 100%;
+    border: 1px solid #000;
+  }
+  
+  .custom-marker {
+    width: 30px; /* Größer */
+    height: 30px; /* Größer */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Leichter Schatten für bessere Sichtbarkeit */
+  }
+  
+  .marker-1 { background-color: #2E5D8F; } /* Helleres Blau */
+  .marker-2 { background-color: #588744; } /* Helleres Grün */
+  .marker-3 { background-color: #A05465; } /* Helleres Weinrot */
+  .marker-4 { background-color: #4A6789; } /* Helleres Graublau */
+  .marker-5 { background-color: #7b4a89; } /* Helleres Braun */
+  
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+  }
+  
+  footer a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Impressum Styles */
+  .impressum {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .impressum h2 {
+    margin-bottom: 20px;
+  }
+  
+  .impressum-content {
+    margin-bottom: 30px;
+  }
+  
+  .impressum h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    padding: 8px 16px;
+  }
+  
+  .back-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .popup-content h2 {
+    margin-bottom: 15px;
+  }
+  
+  .popup-content p {
+    margin-bottom: 20px;
+  }
+  
+  /* Popup-Button-Container */
+  .popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .popup-btn {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  .popup-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Spezieller Style für den Navigationsbutton */
+  #popup-navigate {
+    background-color: black;
+    color: white;
+  }
+  
+  #popup-navigate:hover {
+    background-color: #333;
+  }
+  
+  #popup-close {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+  
+  #popup-close:hover {
+    background-color: #f0f0f0;
+  }

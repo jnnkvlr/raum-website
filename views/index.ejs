@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAUM</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>RAUM</h1>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+              <h2>RAUM - Regional, Aktiv und Miteinander</h2>
+              <p>Stadtraum neu erleben. Menschen begegnen. Ideen teilen.</p>
+              <p>Mit RAUM schaffen wir temporäre Inseln der Begegnung mitten in der Stadt. Offene Mitmach-Stationen laden dazu ein, den Alltag zu unterbrechen, innezuhalten, ins Gespräch zu kommen und den öffentlichen Raum neu zu entdecken.</p>
+              <p>RAUM ist eine Einladung, sich Zeit zu nehmen - für sich, für andere und für die Stadt, in der wir leben.</p>
+            </div>
+          </section>
+        
+        <section class="map-container">
+        <div id="map"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="/impressum">Impressum</a>
+    </footer>
+    </div>
+
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <h2 id="popup-title"></h2>
+          <p id="popup-description"></p>
+          <div class="popup-buttons">
+            <button id="popup-navigate" class="popup-btn navigate-btn">Navigation starten</button>
+            <button id="popup-close" class="popup-btn">Zurück</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="/js/map.js"></script>
+</body>
+</html>
