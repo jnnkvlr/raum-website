@@ -90,21 +90,24 @@
     border: 1px solid #000;
   }
   
+  /* Marker-Stile */
   .custom-marker {
-    width: 30px; /* Größer */
-    height: 30px; /* Größer */
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     border: 2px solid #fff;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Leichter Schatten für bessere Sichtbarkeit */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   }
   
-  .marker-1 { background-color: #2E5D8F; } /* Helleres Blau */
-  .marker-2 { background-color: #588744; } /* Helleres Grün */
-  .marker-3 { background-color: #A05465; } /* Helleres Weinrot */
-  .marker-4 { background-color: #4A6789; } /* Helleres Graublau */
-  .marker-5 { background-color: #7b4a89; } /* Helleres Braun */
+  /* Marker-Farben */
+  .marker-1 { background-color: #2E5D8F; }
+  .marker-2 { background-color: #588744; }
+  .marker-3 { background-color: #A05465; }
+  .marker-4 { background-color: #4A6789; }
+  .marker-5 { background-color: #7b4a89; }
   
+  /* Footer */
   footer {
     margin-top: 50px;
     text-align: center;
@@ -153,8 +156,8 @@
     background-color: #f0f0f0;
   }
   
-/* Popup Styles */
-.popup {
+  /* Popup Grundstile */
+  .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -171,14 +174,19 @@
     display: none;
   }
   
+  /* Popup-Inhalt Container */
   .popup-content {
     background-color: white;
-    padding: 30px;
+    padding: 40px;
     border-radius: 5px;
     max-width: 500px;
     width: 90%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
   }
   
+  /* Popup Überschrift und Text */
   .popup-content h2 {
     margin-bottom: 15px;
   }
@@ -186,14 +194,80 @@
   .popup-content p {
     margin-bottom: 20px;
   }
-  
-  /* Popup-Button-Container */
-  .popup-buttons {
+
+  /* Innerer Container mit vertikaler Struktur */
+  .popup-content-inner {
+    position: relative;
+    z-index: 1;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 25px;
   }
   
+  /* Bild-Container */
+  .popup-image-container {
+    align-self: flex-start;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 20px;
+  }
+  
+  /* Hintergrundkreis */
+  .popup-image-bg {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    bottom: -10px;
+    right: -10px;
+  }
+  
+  /* Foto-Kreis */
+  .popup-image {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .popup-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Textbereich unter dem Bild */
+  .popup-text {
+    margin-bottom: 30px;
+  }
+
+  /* Großer Hintergrundbuchstabe */
+  .popup-letter {
+    position: absolute;
+    top: 30%;
+    right: 0%;
+    font-family: 'Nano-Regular', sans-serif;
+    font-size: 900px;
+    color: #000;
+    opacity: 0.15;
+    z-index: 0;
+    line-height: 0.8;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  /* Buttons-Container */
+  .popup-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Allgemeine Button-Stile */
   .popup-btn {
     padding: 8px 16px;
     background-color: white;
@@ -205,16 +279,18 @@
     background-color: #f0f0f0;
   }
   
-  /* Spezieller Style für den Navigationsbutton */
+  /* Navigationsbutton */
   #popup-navigate {
     background-color: black;
     color: white;
+    margin-left: 20px;
   }
   
   #popup-navigate:hover {
     background-color: #333;
   }
   
+  /* Zurück-Button */
   #popup-close {
     padding: 8px 16px;
     background-color: white;

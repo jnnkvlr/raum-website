@@ -21,31 +21,42 @@ document.addEventListener('DOMContentLoaded', function() {
         name: "Meditationsstation",
         coordinates: [48.1373, 11.5754],
         description: "Ein ruhiger Ort für Achtsamkeit und innere Einkehr, umgeben von der urbanen Landschaft Münchens.",
-        markerClass: "marker-1"
+        markerClass: "marker-1",
+        letter: "M",
+        image: "/images/meditieren.jpg"
       },
       {
         name: "Spielestation",
         coordinates: [48.1642, 11.6056],
         description: "Interaktive Spielfläche für kreatives Miteinander und spielerisches Lernen im Englischen Garten.",
-        markerClass: "marker-2"
+        markerClass: "marker-2",
+        letter: "M",
+        image: "/images/meditieren.jpg"
       },
       {
         name: "Sportstation",
         coordinates: [48.1467, 11.5708],
         description: "Moderne Trainingsgeräte und offene Flächen für verschiedene Sportaktivitäten und Bewegungsformen.",
-        markerClass: "marker-3"
+        markerClass: "marker-3",
+        letter: "M",
+        image: "/images/meditieren.jpg"
       },
       {
         name: "Kunststation",
         coordinates: [48.1731, 11.5462],
         description: "Kreativbereich für künstlerischen Ausdruck und Inspiration mit Blick auf die Stadtkulisse.",
-        markerClass: "marker-4"
+        markerClass: "marker-4",
+        letter: "M",
+        image: "./images/meditieren.jpg"
       },
       {
         name: "Lernstation",
         coordinates: [48.1298, 11.5832],
         description: "Ruhiger Ort zum Lernen, Lesen und für Wissensaustausch in entspannter Atmosphäre.",
-        markerClass: "marker-5"
+        markerClass: "marker-5",
+        letter: "M",
+        image: "/images/meditieren.jpg"
+
       }
     ];
   
@@ -66,15 +77,25 @@ document.addEventListener('DOMContentLoaded', function() {
         icon: customIcon
       }).addTo(map);
       
-      // Popup-Funktion beim Klick
-      marker.on('click', function() {
-        document.getElementById('popup-title').textContent = location.name;
-        document.getElementById('popup-description').textContent = location.description;
-        document.getElementById('popup').classList.remove('hidden');
-        
-        // Speichere die aktuellen Koordinaten für die Navigation
-        currentCoordinates = location.coordinates;
-      });
+        // Beim Klick auf einen Marker
+        marker.on('click', function() {
+            document.getElementById('popup-title').textContent = location.name;
+            document.getElementById('popup-description').textContent = location.description;
+            document.getElementById('popup-letter').textContent = location.letter;
+            
+            // Bild setzen
+            const imgElement = document.getElementById('popup-img');
+            imgElement.src = location.image || '/images/default-placeholder.jpg';
+            imgElement.alt = location.name;
+            
+            // Hintergrundkreis-Farbe setzen
+            document.getElementById('popup-color-bg').style.backgroundColor = location.color;
+            
+            document.getElementById('popup').classList.remove('hidden');
+            
+            // Speichere die aktuellen Koordinaten für die Navigation
+            currentCoordinates = location.coordinates;
+        });
     });
   
     // Navigation starten

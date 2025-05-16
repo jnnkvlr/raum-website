@@ -35,14 +35,32 @@
 
     <div id="popup" class="popup hidden">
         <div class="popup-content">
-          <h2 id="popup-title"></h2>
-          <p id="popup-description"></p>
-          <div class="popup-buttons">
-            <button id="popup-navigate" class="popup-btn navigate-btn">Navigation starten</button>
-            <button id="popup-close" class="popup-btn">Zurück</button>
+          <div class="popup-letter" id="popup-letter">R</div>
+          
+          <div class="popup-content-inner">
+            <!-- Bild oben -->
+            <div class="popup-image-container">
+              <div class="popup-image-bg" id="popup-color-bg"></div>
+              <div class="popup-image">
+                <img id="popup-img" src="/images/default-placeholder.jpg" alt="">
+              </div>
+            </div>
+            
+            <!-- Text darunter -->
+            <div class="popup-text">
+              <h2 id="popup-title"></h2>
+              <p id="popup-description"></p>
+            </div>
+            
+            <!-- Buttons am unteren Rand -->
+            <div class="popup-buttons">
+              <button id="popup-close" class="popup-btn">Zurück</button>
+              <button id="popup-navigate" class="popup-btn navigate-btn">Navigation starten</button>
+            </div>
           </div>
         </div>
       </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="/js/map.js"></script>
